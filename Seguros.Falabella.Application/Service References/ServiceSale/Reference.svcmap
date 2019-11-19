@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9e627069-c110-4829-a360-0cc39c2c7400" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:53822/SaleWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SaleWCF.disco" MetadataType="Disco" ID="3e153cc8-7ff7-44f1-893d-553795802fdf" SourceId="1" SourceUrl="http://localhost:53822/SaleWCF.svc?disco" />
+    <MetadataFile FileName="SaleWCF.xsd" MetadataType="Schema" ID="390de4ff-6408-491c-bae3-ea7b01b2406b" SourceId="1" SourceUrl="http://localhost:53822/SaleWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="SaleWCF.wsdl" MetadataType="Wsdl" ID="d146d4b7-70b5-495e-9613-9572ae2bf485" SourceId="1" SourceUrl="http://localhost:53822/SaleWCF.svc?wsdl" />
+    <MetadataFile FileName="SaleWCF1.xsd" MetadataType="Schema" ID="6e883f35-0e89-4e62-8cfd-9ada627cdc89" SourceId="1" SourceUrl="http://localhost:53822/SaleWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="SaleWCF2.xsd" MetadataType="Schema" ID="6227e522-c08c-4ef0-91b5-446946ca1e29" SourceId="1" SourceUrl="http://localhost:53822/SaleWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

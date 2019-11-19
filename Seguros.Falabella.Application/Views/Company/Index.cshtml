@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Seguros.Falabella.Application.Models.CompanyModels>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_nit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comp_phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_nit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comp_phone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.comp_id }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.comp_id  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.comp_id  })
+        </td>
+    </tr>
+}
+
+</table>

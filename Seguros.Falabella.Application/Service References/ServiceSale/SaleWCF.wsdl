@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SaleWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53822/SaleWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53822/SaleWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53822/SaleWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SegurosFalabellaEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISaleWCF_SelectSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSale" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectSaleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSaleId" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_SelectSaleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSaleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_AddSale_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSale" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_AddSale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_AddSaleCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSaleCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ISaleWCF_AddSaleCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSaleCustomerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISaleWCF">
+    <wsdl:operation name="SelectSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SelectSale" message="tns:ISaleWCF_SelectSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SelectSaleResponse" message="tns:ISaleWCF_SelectSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SelectCustomer" message="tns:ISaleWCF_SelectCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SelectCustomerResponse" message="tns:ISaleWCF_SelectCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSaleId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/SelectSaleId" message="tns:ISaleWCF_SelectSaleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/SelectSaleIdResponse" message="tns:ISaleWCF_SelectSaleId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSale">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/AddSale" message="tns:ISaleWCF_AddSale_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/AddSaleResponse" message="tns:ISaleWCF_AddSale_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSaleCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISaleWCF/AddSaleCustomer" message="tns:ISaleWCF_AddSaleCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISaleWCF/AddSaleCustomerResponse" message="tns:ISaleWCF_AddSaleCustomer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISaleWCF" type="tns:ISaleWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectSale">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SelectSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SelectCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSaleId">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/SelectSaleId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSale">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/AddSale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSaleCustomer">
+      <soap:operation soapAction="http://tempuri.org/ISaleWCF/AddSaleCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SaleWCF">
+    <wsdl:port name="BasicHttpBinding_ISaleWCF" binding="tns:BasicHttpBinding_ISaleWCF">
+      <soap:address location="http://localhost:53822/SaleWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

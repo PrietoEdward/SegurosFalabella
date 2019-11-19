@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Seguros.Falabella.Application.ServiceSale.Sale>
+
+@{
+    ViewBag.Title = "SelectSale";
+}
+
+<h2>Lista venta</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_cc)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.cust_lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_name)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.sale_assistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sale_coverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sale_prima)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prod_name)
+        </th>
+        <th>Detalle</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_cc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_name)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.sale_assistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sale_coverage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sale_prima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prod_name)
+        </td>
+        <td>
+            @Html.ActionLink("Ver", "SelectSaleId", new {  id=item.sale_id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

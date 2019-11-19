@@ -1,0 +1,122 @@
+﻿@model Seguros.Falabella.Application.ServiceSale.Sale
+
+@{
+    ViewBag.Title = "SelectSaleId";
+}
+
+<h2>SelectSaleId</h2>
+
+<div>
+    <h4>Sale</h4>
+    <hr />
+    <dl class="dl-horizontal">        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_cc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_cc)
+        </dd> 
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_dateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_dateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cust_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cust_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_features)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_features)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prod_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prod_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sale_assistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sale_assistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sale_coverage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sale_coverage)
+        </dd>        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sale_prima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sale_prima)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "SelectSale")
+</p>

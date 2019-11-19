@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Seguros.Falabella.Application.ServiceSale.Customer>
+
+@{
+    ViewBag.Title = "SelectCustomer";
+}
+
+<h2>Lista Clientes</h2>
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.cust_cc)
+        </th>        
+        <th>
+            @Html.DisplayNameFor(model => model.cust_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_dateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_lastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cust_phone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_cc)
+        </td>        
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_lastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_dateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cust_phone)
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
