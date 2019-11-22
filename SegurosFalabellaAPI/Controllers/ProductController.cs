@@ -1,4 +1,5 @@
-﻿using SegurosFalabellaDAL;
+﻿using SegurosFalabellaBL;
+using SegurosFalabellaDAL;
 using SegurosFalabellaEntity;
 using System;
 using System.Collections.Generic;
@@ -11,14 +12,14 @@ namespace SegurosFalabellaAPI.Controllers
 {
     public class ProductController : ApiController
     {
-        private ProductDAL ProdDAL = new ProductDAL();
+        private ProductBL ProdBL = new ProductBL();
         // GET: api/Product
         public List<Product> Get()
         {
             List<Product> respuesta = new List<Product>();
             try
             {
-                respuesta = ProdDAL.SelectProduct();
+                respuesta = ProdBL.SelectProduct();
                 return respuesta;
             }
             catch (Exception ex)
@@ -33,7 +34,7 @@ namespace SegurosFalabellaAPI.Controllers
             Product respuesta = new Product();
             try
             {
-                respuesta = ProdDAL.SelectProductId(id);
+                respuesta = ProdBL.SelectProductId(id);
                 return respuesta;
             }
             catch (Exception ex)
@@ -47,7 +48,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                ProdDAL.AddProduct(Objeto);
+                ProdBL.AddProduct(Objeto);
 
             }
             catch (Exception ex)
@@ -61,7 +62,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                ProdDAL.UpdateProduct(Objeto);
+                ProdBL.UpdateProduct(Objeto);
 
             }
             catch (Exception ex)
@@ -75,7 +76,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                ProdDAL.DeleteProduct(id);
+                ProdBL.DeleteProduct(id);
 
             }
             catch (Exception ex)

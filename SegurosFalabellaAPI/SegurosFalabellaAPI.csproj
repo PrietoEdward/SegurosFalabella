@@ -107,6 +107,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SegurosFalabellaBL\SegurosFalabellaBL.csproj">
+      <Project>{51D1BC53-C117-4609-A0F8-2B075B0814C9}</Project>
+      <Name>SegurosFalabellaBL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SegurosFalabellaDAL\SegurosFalabellaDAL.csproj">
       <Project>{792E8FEE-975E-4458-B427-5FC2683A5926}</Project>
       <Name>SegurosFalabellaDAL</Name>

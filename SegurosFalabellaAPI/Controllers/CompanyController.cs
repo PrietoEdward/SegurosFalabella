@@ -1,4 +1,5 @@
-﻿using SegurosFalabellaDAL;
+﻿using SegurosFalabellaBL;
+using SegurosFalabellaDAL;
 using SegurosFalabellaEntity;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace SegurosFalabellaAPI.Controllers
 {
     public class CompanyController : ApiController
     {
-        private CompanyDAL CompDAL = new CompanyDAL();
+        private CompanyBL CompBL = new CompanyBL();
 
         // GET: api/Company
         public List<Company> Get()
@@ -19,7 +20,7 @@ namespace SegurosFalabellaAPI.Controllers
             List<Company> respuesta = new List<Company>();
             try
             {
-                respuesta = CompDAL.SelectCompany();
+                respuesta = CompBL.SelectCompany();
                 return respuesta;
             }
             catch (Exception ex)
@@ -34,7 +35,7 @@ namespace SegurosFalabellaAPI.Controllers
             Company respuesta = new Company();
             try
             {
-                respuesta = CompDAL.SelectCompanyId(id);
+                respuesta = CompBL.SelectCompanyId(id);
                 return respuesta;
             }
             catch (Exception ex)
@@ -48,7 +49,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                CompDAL.AddCompany(Objeto);
+                CompBL.AddCompany(Objeto);
 
             }
             catch (Exception ex)
@@ -62,7 +63,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                CompDAL.UpdateCompany(Objeto);
+                CompBL.UpdateCompany(Objeto);
 
             }
             catch (Exception ex)
@@ -76,7 +77,7 @@ namespace SegurosFalabellaAPI.Controllers
         {
             try
             {
-                CompDAL.DeleteCompany(id);
+                CompBL.DeleteCompany(id);
 
             }
             catch (Exception ex)
